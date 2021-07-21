@@ -1,0 +1,126 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  overflow: hidden;
+  animation: bodyshake linear 6s infinite;
+}
+.sky{
+     width: 100%;
+     height: 100vh;
+     background-image: url(background.jpg);
+     position: absolute;
+}
+
+.trees{
+
+  height: 100vh;
+  width: 100vw;
+  background-image: url(trees.png);
+  background-size:cover;
+
+}
+
+.track{
+      height: 40vh;
+      width: 800vw;
+      background-image: url(track.png);
+      background-repeat:repeat-x;
+      position: absolute;
+      top:70vh;
+      animation: carmove linear 13s infinite;
+}
+
+.car{
+  height: 100px;
+  width:310px;
+  background-image: url(carbody.png);
+  background-size:cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  left:44px;
+   bottom:130px;
+   animation: carshake linear 3s infinite;
+
+
+}
+
+.wheel1 img{
+
+  width:77px;
+  position: relative;
+  top:30px;
+  left:33px;
+  animation: wheelRotation linear .6s infinite;
+
+
+}
+
+.wheel2 img{
+
+  width:77px;
+  position: relative;
+
+  top: -50px;
+  left: 210px;
+  animation: wheelRotation linear .6s infinite;
+
+}
+
+/* 100 percent me animaton jb phauhnche to 360 degree rotate */
+
+@keyframes wheelRotation
+{
+  100%{
+       transform: rotate(360deg);
+
+  }
+}
+
+@keyframes carmove
+{
+  100%{
+       transform: translateX(-500vw);
+
+  }
+}
+
+@keyframes carshake
+{
+
+  0%{
+       transform: translateY(-5px);
+
+  }
+
+  0%{
+       transform: translateY(5px);
+
+  }
+  100%{
+       transform: translateX(-5px);
+
+  }
+}
+
+
+
+@keyframes bodyshake
+{
+
+  0%{
+       transform: translateY(-50px);
+
+  }
+
+  0%{
+       transform: translateY(50px);
+
+  }
+  100%{
+       transform: translateX(-50px);
+
+  }
+}
